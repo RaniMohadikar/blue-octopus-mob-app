@@ -1,0 +1,7 @@
+{
+  "name": "blue-ocktopus",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
