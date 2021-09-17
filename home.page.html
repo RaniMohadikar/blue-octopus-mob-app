@@ -1,0 +1,541 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="header-coloring">
+    <ion-buttons slot="start">
+      <ion-menu-button class="menu-button">
+        <ion-icon src="../../assets/icon/menu.svg"></ion-icon>
+      </ion-menu-button>
+    </ion-buttons>
+
+    <ion-thumbnail class="d-inline-block float-left">
+      <img src="../../assets/logo/logo1.jpeg" />
+    </ion-thumbnail>
+
+    <!-- <ion-title>
+      <ion-card-title class="loyalty">LOYALTY</ion-card-title>
+      <ion-card-subtitle class="metric-indicator"
+        >Metrics & Indicator</ion-card-subtitle
+      >
+    </ion-title> -->
+
+    <ion-buttons slot="end" (click)="showSearchBar=!showSearchBar">
+      <ion-button>
+        <ion-icon
+          class="header-icon-color"
+          slot="icon-only"
+          name="search-outline"
+        ></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/notification']">
+        <ion-icon
+          class="header-icon-color"
+          slot="icon-only"
+          name="mail-outline"
+        ></ion-icon>
+      </ion-button>
+      <ion-badge color="danger notification-count-badge">
+        <span class="ml--1">10</span>
+      </ion-badge>
+    </ion-buttons>
+  </ion-toolbar>
+
+  <ion-toolbar *ngIf="showSearchBar" class="header-coloring">
+    <ion-searchbar
+      class="ion-searchbar-cust"
+      placeholder="Search Member"
+    ></ion-searchbar>
+    <ion-buttons
+      slot="end"
+      class="search-submit"
+      [routerLink]="['/home/search-member']"
+    >
+      <ion-button>
+        <ion-icon name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="home-screen">
+  <ion-grid class="welcome-text-bg">
+    <ion-row class="" *ngIf="!showSearchBar">
+      <ion-col size="12" class="welcome-text">Welcome</ion-col>
+      <ion-col size="12" class="welcome-sub-text">Manik Mobile</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <mat-accordion>
+    <ion-grid class="body-padding">
+      <ion-row>
+
+        <ion-col size="6" class="padding-8px">
+          <mat-expansion-panel
+            class="border-radius-10 card-1 open-on-click"
+            hideToggle="true"
+            disabled="true"
+            (click)="cardAction('enrolled-member-base')"
+          >
+            <mat-expansion-panel-header class="box-size">
+
+              <ion-grid>
+                <ion-row class="card-heading-color">
+                  <ion-col size="12" class="card-heading ion-no-padding d-inline-block">ENROLLED MEMBER BASE</ion-col>
+                  <ion-col size="12" class="card-sub-heading ion-no-padding">
+                    <ion-col size="3" class="ion-no-padding" >
+                      <ion-thumbnail class="card-logo d-inline-block float-left">
+                        <img src="../../assets/members.png" />
+                      </ion-thumbnail>
+                    </ion-col>
+                    <ion-col size="9" class="ion-no-padding card-value-align">
+                      38,19,153
+                    </ion-col>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+
+            </mat-expansion-panel-header>
+          </mat-expansion-panel>
+        </ion-col>
+
+        <ion-col size="6" class="padding-8px">
+          <mat-expansion-panel
+            class="border-radius-10 card-2 open-on-click"
+            hideToggle="true"
+            disabled="true"
+            (click)="cardAction('business-generated')"
+          >
+            <mat-expansion-panel-header class="box-size">
+
+              <ion-grid>
+                <ion-row class="card-heading-color">
+                  <ion-col size="12" class="card-heading ion-no-padding d-inline-block">BUSINESS GENERATED </ion-col>
+                  <ion-col size="12" class="card-sub-heading ion-no-padding">
+                    <ion-col size="3" class="ion-no-padding" >
+                      <ion-thumbnail class="card-logo d-inline-block float-left">
+                        <img src="../../assets/business.png" />
+                      </ion-thumbnail>
+                    </ion-col>
+                    <ion-col size="9" class="ion-no-padding card-value-align">
+                      15,23,820
+                    </ion-col>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+  
+            </mat-expansion-panel-header>
+          </mat-expansion-panel>
+        </ion-col>
+
+        <ion-col size="12" class="padding-8px">
+          <mat-expansion-panel
+            class="border-radius-10 card-3 open-on-click"
+            hideToggle="false"
+            disabled="false"
+            (click)="cardAction('expand')"
+          >
+            <mat-expansion-panel-header class="list-size">
+              <ion-grid>
+                <ion-row class="card-heading-color">
+                  <ion-col size="12" class="card-heading ion-no-padding d-inline-block">
+                    <ion-col size="2" class="ion-no-padding float-left" >
+                      <ion-thumbnail class="card-logo d-inline-block float-left">
+                        <img src="../../assets/business.png" />
+                      </ion-thumbnail>
+                    </ion-col>
+                    <ion-col  class="ion-no-padding card-value-align list-card-header-cust">
+                      POINTS SUMMARY
+                    </ion-col>
+                    <ion-col  class="ion-no-padding card-value-align list-size-value list-card-value-cust">
+                      12,34,728
+                    </ion-col>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </mat-expansion-panel-header>
+
+            <div class="card-body">
+              <div class="">
+                <canvas
+                  #barCanvas
+                  style="position: relative; height: 20vh; width: 40vw"
+                ></canvas>
+              </div>
+            </div>
+          </mat-expansion-panel>
+        </ion-col>
+
+        <ion-col size="12" class="padding-8px">
+          <mat-expansion-panel
+            class="border-radius-10 card-4 open-on-click"
+            hideToggle="false"
+            disabled="false"
+            (click)="cardAction('expand')"
+          >
+            <mat-expansion-panel-header class="list-size">
+              <ion-grid>
+                <ion-row class="card-heading-color">
+                  <ion-col size="12" class="card-heading ion-no-padding d-inline-block">
+                    <ion-col size="2" class="ion-no-padding  float-left" >
+                      <ion-thumbnail class="card-logo d-inline-block float-left">
+                        <img src="../../assets/attention.png" />
+                      </ion-thumbnail>
+                    </ion-col>
+                    <ion-col  class="ion-no-padding card-value-align list-card-header-cust">
+                      NEEDS ATTENTION 
+                    </ion-col>
+                    <ion-col  class="ion-no-padding card-value-align list-size-value list-card-value-cust">
+                      32,903
+                    </ion-col>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </mat-expansion-panel-header>
+
+            <div class="card-body">
+              <ion-card
+                style="
+                  background-color: #2f5496;
+                  --color: white;
+                  font-weight: 500;
+                "
+              >
+                <ion-card-header class="padding-8px">
+                  <div>
+                    <div class="float-left">Only Once</div>
+                    <div class="float-right font-18">13,492</div>
+                  </div>
+                </ion-card-header>
+              </ion-card>
+
+              <ion-card
+                style="
+                  background-color: #00b0f0;
+                  --color: white;
+                  font-weight: 500;
+                "
+              >
+                <ion-card-header class="padding-8px">
+                  <div>
+                    <div class="float-left">Non-Redeemed</div>
+                    <div class="float-right font-18">4,304</div>
+                  </div>
+                </ion-card-header>
+              </ion-card>
+
+              <ion-card
+                style="
+                  background-color: #92d050;
+                  --color: white;
+                  font-weight: 500;
+                "
+              >
+                <ion-card-header class="padding-8px">
+                  <div>
+                    <div class="float-left">InActive</div>
+                    <div class="float-right font-18">7,283</div>
+                  </div>
+                </ion-card-header>
+              </ion-card>
+
+              <div class="text-center">
+                <ion-button
+                  fill="outline"
+                  [routerLink]="['/home/need-attention']"
+                  >Go Inside</ion-button
+                >
+              </div>
+            </div>
+          </mat-expansion-panel>
+        </ion-col>
+
+        <ion-col size="6" class="padding-8px">
+          <mat-expansion-panel
+            class="border-radius-10 card-5 open-on-click"
+            hideToggle="true"
+            disabled="true"
+            (click)="cardAction('get-free-sms-wa')"
+          >
+            <mat-expansion-panel-header class="box-size">
+
+              <ion-grid>
+                <ion-row class="card-heading-color">
+                  <ion-col size="12" class="card-heading ion-no-padding d-inline-block">GET YOUR FREE SMS/ WA</ion-col>
+                  <ion-col size="12" class="card-sub-heading ion-no-padding">
+                    <ion-col size="3" class="ion-no-padding" >
+                      <ion-thumbnail class="card-logo d-inline-block float-left">
+                        <img src="../../assets/getfree.png" />
+                      </ion-thumbnail>
+                    </ion-col>
+                    <ion-col size="9" class="ion-no-padding card-value-align">
+                      1,00,000
+                    </ion-col>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+
+            </mat-expansion-panel-header>
+          </mat-expansion-panel>
+        </ion-col>
+
+        <ion-col size="6" class="padding-8px">
+          <mat-expansion-panel
+            class="border-radius-10 card-6 open-on-click"
+            hideToggle="true"
+            disabled="true"
+            (click)="cardAction('redemption-rate')"
+          >
+            <mat-expansion-panel-header class="box-size">
+
+              <ion-grid>
+                <ion-row class="card-heading-color">
+                  <ion-col size="12" class="card-heading ion-no-padding d-inline-block">REDEMPTION RATE </ion-col>
+                  <ion-col size="12" class="card-sub-heading ion-no-padding">
+                    <ion-col size="3" class="ion-no-padding" >
+                      <ion-thumbnail class="card-logo d-inline-block float-left">
+                        <img src="../../assets/redemption.png" />
+                      </ion-thumbnail>
+                    </ion-col>
+                    <ion-col size="9" class="ion-no-padding card-value-align">
+                      17.82%
+                    </ion-col>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+
+            </mat-expansion-panel-header>
+          </mat-expansion-panel>
+        </ion-col>
+
+        <ion-col size="12" class="padding-8px">
+          <mat-expansion-panel
+            class="border-radius-10 card-7 open-default"
+            hideToggle="true"
+            disabled="true"
+            (click)="cardAction('expand')"
+          >
+            <mat-expansion-panel-header class="list-size">
+              <ion-grid>
+                <ion-row class="card-heading-color">
+                  <ion-col size="12" class="card-heading ion-no-padding d-inline-block">
+                    <ion-col size="2" class="ion-no-padding float-left" >
+                      <ion-thumbnail class="card-logo d-inline-block float-left">
+                        <img src="../../assets/calendar.png" />
+                      </ion-thumbnail>
+                    </ion-col>
+                    <ion-col   class="ion-no-padding card-value-align">
+                      UPCOMING CELEBRATIONS & POINTS EXPIRY
+                    </ion-col>
+                    <!-- <ion-col class="ion-no-padding card-value-align list-size-value">
+                      32,903
+                    </ion-col> -->
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </mat-expansion-panel-header>
+
+            <div class="card-body">
+              <div class="">
+                <ion-grid style="background: #e8ebf5; padding: 0px">
+                  <ion-row
+                    class="font-color-black font-bold-500"
+                    style="background: #e8ebf5"
+                  >
+                    <ion-col size="4"> Event </ion-col>
+                    <ion-col size="4"> This Month </ion-col>
+                    <ion-col size="4"> Next Month </ion-col>
+                  </ion-row>
+
+                  <ion-row
+                    class="font-color-white font-bold-500"
+                    style="background: #2f5496; margin-bottom: 2vh"
+                  >
+                    <ion-col size="4"> Birthdays </ion-col>
+                    <ion-col size="4"> 492 </ion-col>
+                    <ion-col size="4"> 562 </ion-col>
+                  </ion-row>
+
+                  <ion-row
+                    class="font-color-white font-bold-500"
+                    style="background: #00b0f0; margin-bottom: 2vh"
+                  >
+                    <ion-col size="4"> Anniversaries </ion-col>
+                    <ion-col size="4"> 43 </ion-col>
+                    <ion-col size="4"> 12 </ion-col>
+                  </ion-row>
+
+                  <ion-row
+                    class="font-color-white font-bold-500"
+                    style="background: #92d050"
+                  >
+                    <ion-col size="4"> Points Expiry </ion-col>
+                    <ion-col size="4"> 231 </ion-col>
+                    <ion-col size="4"> 392 </ion-col>
+                  </ion-row>
+                </ion-grid>
+              </div>
+            </div>
+          </mat-expansion-panel>
+        </ion-col>
+
+        <ion-col size="6" class="padding-8px">
+          <mat-expansion-panel
+            class="border-radius-10 card-8 open-on-click"
+            hideToggle="true"
+            disabled="true"
+            (click)="cardAction('know-your-member')"
+          >
+            <mat-expansion-panel-header class="list-size">
+              <ion-grid>
+                <ion-row class="card-heading-color">
+                  <ion-col size="12" class="card-heading ion-no-padding d-inline-block">
+                    <ion-col size="4" class="ion-no-padding float-left" >
+                      <ion-thumbnail class="card-logo d-inline-block float-left">
+                        <img src="../../assets/members.png" />
+                      </ion-thumbnail>
+                    </ion-col>
+                    <ion-col class="ion-no-padding card-value-align">
+                      KNOW YOUR  MEMBERS
+                    </ion-col>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+
+            </mat-expansion-panel-header>
+          </mat-expansion-panel>
+        </ion-col>
+
+        <ion-col size="6" class="padding-8px">
+          <mat-expansion-panel
+            class="border-radius-10 card-9 open-on-click"
+            hideToggle="true"
+            disabled="true"
+            (click)="cardAction('member-webpage-performance')"
+          >
+            <mat-expansion-panel-header class="list-size">
+
+              <ion-grid>
+                <ion-row class="card-heading-color">
+                  <ion-col size="12" class="card-heading ion-no-padding d-inline-block">
+                    <ion-col size="4" class="ion-no-padding float-left" >
+                      <ion-thumbnail class="card-logo d-inline-block float-left">
+                        <img src="../../assets/members.png" />
+                      </ion-thumbnail>
+                    </ion-col>
+                    <ion-col class="ion-no-padding card-value-align">
+                      MEMBERS WEB-PAGE PERFORMANCE
+                    </ion-col>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+
+            </mat-expansion-panel-header>
+          </mat-expansion-panel>
+        </ion-col>
+
+        <ion-col size="12" class="padding-8px">
+          <mat-expansion-panel
+            class="border-radius-10 card-10 open-on-click"
+            hideToggle="true"
+            disabled="true"
+            (click)="cardAction('upload-base-conversion')"
+          >
+            <mat-expansion-panel-header class="list-size">
+              <ion-grid>
+                <ion-row class="card-heading-color">
+                  <ion-col size="12" class="card-heading ion-no-padding d-inline-block">
+                    <ion-col size="2" class="ion-no-padding  float-left" >
+                      <ion-thumbnail class="card-logo d-inline-block float-left">
+                        <img src="../../assets/bulk.png" />
+                      </ion-thumbnail>
+                    </ion-col>
+                    <ion-col   class="ion-no-padding card-value-align list-card-header-cust">
+                      BULK UPLOAD CONVERSION
+                    </ion-col>
+                    <ion-col  class="ion-no-padding card-value-align list-size-value list-card-value-cust">
+                      17.3%
+                    </ion-col>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </mat-expansion-panel-header>
+
+            <!-- <div class="card-body">
+           
+            </div> -->
+          </mat-expansion-panel>
+        </ion-col>
+
+        <ion-col size="12" class="padding-8px">
+          <mat-expansion-panel
+            class="border-radius-10 card-11 open-on-click"
+            hideToggle="true"
+            disabled="true"
+            (click)="cardAction('campaign-performance')"
+          >
+            <mat-expansion-panel-header class="list-size">
+              <ion-grid>
+                <ion-row class="card-heading-color">
+                  <ion-col size="12" class="card-heading ion-no-padding d-inline-block">
+                    <ion-col size="2" class="ion-no-padding  float-left" >
+                      <ion-thumbnail class="card-logo d-inline-block float-left">
+                        <img src="../../assets/trophy.png" />
+                      </ion-thumbnail>
+                    </ion-col>
+                    <ion-col   class="ion-no-padding card-value-align">
+                      CAMAPIGN PERFORMANCE 
+                    </ion-col>
+                    <!-- <ion-col size="4" class="ion-no-padding card-value-align list-size-value">
+                      32,903
+                    </ion-col> -->
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </mat-expansion-panel-header>
+
+            <!-- <div class="card-body">
+           
+            </div> -->
+          </mat-expansion-panel>
+        </ion-col>
+
+        <ion-col size="12" class="padding-8px">
+          <mat-expansion-panel
+            class="border-radius-10 card-12 open-default"
+            hideToggle="true"
+            disabled="true"
+            (click)="cardAction('open-default')"
+          >
+            <mat-expansion-panel-header class="list-size">
+              <ion-grid>
+                <ion-row class="card-heading-color">
+                  <ion-col size="12" class="card-heading ion-no-padding d-inline-block">
+                    <ion-col size="2" class="ion-no-padding  float-left" >
+                      <ion-thumbnail class="card-logo d-inline-block float-left">
+                        <img src="../../assets/graphlogo.png" />
+                      </ion-thumbnail>
+                    </ion-col>
+                    <ion-col  class="ion-no-padding card-value-align">
+                      SHARE OF BUSINESS
+                    </ion-col>
+                    <!-- <ion-col size="4" class="ion-no-padding card-value-align list-size-value">
+                      32,903
+                    </ion-col> -->
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </mat-expansion-panel-header>
+
+            <div class="card-body">
+              <canvas
+                #lineCanvas
+                style="position: relative; height: 20vh; width: 40vw"
+              ></canvas>
+            </div>
+          </mat-expansion-panel>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </mat-accordion>
+</ion-content>

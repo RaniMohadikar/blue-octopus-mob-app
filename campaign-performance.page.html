@@ -1,0 +1,45 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Campaign Performance</ion-title>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-grid>
+        <ion-row style="margin-left: 5px;  margin-top: 10px;">
+            <ion-col size="3.8" class="col mar1" style="background-color: #2D4A98;">
+                <ion-icon name="bag-remove-outline"></ion-icon><span>Tab 1</span>
+            </ion-col>
+            <ion-col size="3.8" class="col mar5" style="background-color: #9E959A;">
+                <ion-icon name="bag-remove-outline"></ion-icon><span>Tab 2</span>
+            </ion-col>
+            <ion-col size="3.8" class="col mar5" style="background-color: #82D0F7;">
+                <ion-icon name="bag-remove-outline"></ion-icon><span>Tab 3</span>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+
+            <ion-col size="12" class="col text-center size12 chart mar15">
+                <span>Chart title goes here</span>
+                <p class="p">15 April - 21 April</p>
+                <div class="" *ngIf="'bar-chart'">
+                    <canvas #barCanvas style="position: relative; height: 15vh; width: 29vw"></canvas>
+                </div>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+
+            <ion-col size="12" class="col text-center size12 chart mar15">
+                <span>Chart title goes here</span>
+                <p class="p">15 April - 21 April</p>
+                <div class="" *ngIf="'doubleLineChart'">
+                    <canvas #doubleLineCanvas style="position: relative; height: 4.5vh; width: 35vw"></canvas>
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+</ion-content>

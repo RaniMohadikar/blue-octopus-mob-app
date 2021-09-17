@@ -1,0 +1,81 @@
+<ion-grid class="ion-padding">
+    <ion-row style="margin-left: 5px;  margin-top: 10px;">
+        <ion-col size="3.8" class="col mar1" style="background-color: #0a47ee;">
+           <h6>TOTAL BIZ($)</h6>
+           <h4 style="float: right;">15,23,820</h4>
+        </ion-col>
+        <ion-col size="3.8" class="col mar5" style="background-color: #dd2898;">
+            <h6>TOTAL BIZ($)</h6> 
+            <h4 style="float: right;">15,23,820</h4>   
+        </ion-col>
+        <ion-col size="3.8" class="col mar5" style="background-color: #f02323;">
+            <h6>TOTAL BIZ($)</h6>
+            <h4 style="float: right;">15,23,820</h4> 
+        </ion-col>
+    </ion-row>
+
+
+<ion-row>
+<ion-card class="col text-center size12 chart mar15" style="height: 250px;" >
+    <ion-card-content>
+        <ion-list >
+            <ion-item>
+              <ion-label>Header A</ion-label>
+              <ion-label>Header B</ion-label>
+              <ion-label>Header C</ion-label>
+              <ion-label>Header D</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>Cell A1</ion-label>
+              <ion-label>Cell B1</ion-label>
+              <ion-label>Cell C1</ion-label>
+              <ion-label style="text-align: right;">1</ion-label>
+            </ion-item>
+             <ion-item>
+              <ion-label>Cell A2</ion-label>
+              <ion-label>Cell B2</ion-label>
+              <ion-label>Cell C2</ion-label>
+              <ion-label  style="text-align: right;">2</ion-label>
+            </ion-item>
+           <ion-item>
+              <ion-label>Cell A3</ion-label>
+              <ion-label>Cell B3</ion-label>
+              <ion-label>Cell C3</ion-label>
+              <ion-label  style="text-align: right;">3</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>Cell A4</ion-label>
+              <ion-label>Cell B4</ion-label>
+              <ion-label>Cell C4</ion-label>
+              <ion-label style="text-align: right;">4</ion-label>
+            </ion-item>
+        </ion-list> 
+    </ion-card-content>
+ </ion-card>
+</ion-row>
+
+<ion-card class="col text-center size12 chart mar15">
+    <ion-card-content>
+        <span>Chart title</span>
+        <p class="p">15 April - 15 May</p>
+        <canvas #doughnutCanvas style="position: relative; height:20vh; width:40vw;" value="58%"></canvas>
+    </ion-card-content>
+</ion-card>
+<!-- <ion-row>
+    <ion-card style="width: 330px;">
+    <ion-col size="2"></ion-col>
+    <ion-col size="8" style="text-align: center;">
+            <ion-card-content style="width: 160px; text-align: center;">
+             <ion-card-title style="text-align-last: center;" >Chat Title</ion-card-title>
+             <p class="text-center">15 April- 15 May</p>
+             <canvas #doughnutCanvas style="position: relative; height:150vh; width:30vw;" [percent]="58"></canvas>
+            </ion-card-content>
+        
+    </ion-col> 
+        <ion-col size="2"></ion-col>
+    </ion-card>
+</ion-row> -->
+
+</ion-grid>
+  
+

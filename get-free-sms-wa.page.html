@@ -1,0 +1,144 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Get Your Free SMS / WA</ion-title>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-grid>
+        <ion-row style="margin-left: 5px;  margin-top: 10px;">
+            <ion-col size="3.8" class="col mar1" style="background-color: #96A5CE;">
+                <ion-icon name="bag-remove-outline"></ion-icon>
+                <span>Tab 1</span>
+            </ion-col>
+            <ion-col size="3.8" class="col mar5" style="background-color: #3E2624;">
+                <ion-icon name="bag-remove-outline"></ion-icon>
+                <span>Tab 2</span>
+            </ion-col>
+            <ion-col size="3.8" class="col mar5" style="background-color: #82D0F7;">
+                <ion-icon name="bag-remove-outline"></ion-icon>
+                <span>Tab 3</span>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <ion-card class="col text-center size12 chart mar15">
+        <ion-card-content>
+            <!-- <ion-row style="font-weight: 565;">
+                <ion-col size="3">
+                    Header A
+                </ion-col>
+                <ion-col size="3">
+                    Header B
+                </ion-col>
+                <ion-col size="3">
+                    Header C
+                </ion-col>
+                <ion-col size="3">
+                    Header D
+                </ion-col>
+            </ion-row>
+            <hr>
+            <ion-row>
+                <ion-col size="3">
+                    Cell A1
+                </ion-col>
+                <ion-col size="3">
+                    Cell B1
+                </ion-col>
+                <ion-col size="3">
+                    Cell C1
+                </ion-col>
+                <ion-col size="3">
+                    1
+                </ion-col>
+            </ion-row>
+            <hr>
+            <ion-row>
+                <ion-col size="3">
+                    Cell A2
+                </ion-col>
+                <ion-col size="3">
+                    Cell B2
+                </ion-col>
+                <ion-col size="3">
+                    Cell C2
+                </ion-col>
+                <ion-col size="3">
+                    2
+                </ion-col>
+            </ion-row>
+            <hr>
+            <ion-row>
+                <ion-col size="3">
+                    Cell A3
+                </ion-col>
+                <ion-col size="3">
+                    Cell B3
+                </ion-col>
+                <ion-col size="3">
+                    Cell C3
+                </ion-col>
+                <ion-col size="3">
+                    3
+                </ion-col>
+            </ion-row>
+            <hr>
+            <ion-row>
+                <ion-col size="3">
+                    Cell A4
+                </ion-col>
+                <ion-col size="3">
+                    Cell B4
+                </ion-col>
+                <ion-col size="3">
+                    Cell C4
+                </ion-col>
+                <ion-col size="3">
+                    4
+                </ion-col>
+            </ion-row> -->
+            <ion-list>
+                <ion-item style="font-size:12px">
+                    <ion-label>Header A</ion-label>
+                    <ion-label>Header B</ion-label>
+                    <ion-label>Header C</ion-label>
+                    <ion-label>Header D</ion-label>
+                </ion-item>
+                <ion-item style="font-size:12px">
+                    <ion-label>Cell A1</ion-label>
+                    <ion-label>Cell B1</ion-label>
+                    <ion-label>Cell C1</ion-label>
+                    <ion-label style="text-align: right;">1</ion-label>
+                </ion-item>
+                <ion-item style="font-size:12px">
+                    <ion-label>Cell A2</ion-label>
+                    <ion-label>Cell B2</ion-label>
+                    <ion-label>Cell C2</ion-label>
+                    <ion-label style="text-align: right;">2</ion-label>
+                </ion-item>
+                <ion-item style="font-size:12px">
+                    <ion-label>Cell A3</ion-label>
+                    <ion-label>Cell B3</ion-label>
+                    <ion-label>Cell C3</ion-label>
+                    <ion-label style="text-align: right;">3</ion-label>
+                </ion-item>
+                <ion-item style="font-size:12px">
+                    <ion-label>Cell A4</ion-label>
+                    <ion-label>Cell B4</ion-label>
+                    <ion-label>Cell C4</ion-label>
+                    <ion-label style="text-align: right;">4</ion-label>
+                </ion-item>
+            </ion-list>
+        </ion-card-content>
+    </ion-card>
+    <ion-card class="col text-center size12 chart mar15">
+        <ion-card-content>
+            <span>Chart title</span>
+            <p class="p">15 April - 15 May</p>
+            <canvas #doughnutCanvas style="position: relative; height:20vh; width:40vw;"></canvas>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

@@ -1,0 +1,277 @@
+//######################## Header CSS ########################
+.menu-button {
+  font-size: 4vh;
+}
+
+.welcome-text-bg {
+  // padding-top: 2vh;
+  padding-bottom: 0;
+  padding-left: 8px;
+}
+
+.body-padding{
+  padding-top: 0;
+}
+
+.welcome-text {
+  font-size: 22px !important;
+  color: #2a2ac0 !important;
+  font-family: Montserrat-Medium, Montserrat !important;
+  font-weight: 500 !important;
+}
+
+.welcome-sub-text {
+  font-size: 20px !important;
+  color: #02103d !important;
+  font-family: Montserrat-Medium, Montserrat !important;
+  font-weight: 500 !important;
+}
+
+.loyalty {
+  font-size: 24px !important;
+  font-family: Montserrat-Bold, Montserrat !important;
+  font-weight: 700 !important;
+  color: #181461 !important;
+}
+
+.metric-indicator {
+  font-size: 15px !important;
+  font-family: Montserrat-Medium, Montserrat !important;
+  font-weight: 500 !important;
+  color: #181461 !important;
+}
+
+.header-icon-color {
+  color: #d1d1d1 !important;
+}
+
+.notification-count-badge {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  font-size: 9px;
+  border-radius: 10px;
+  width: 19px;
+  height: 19px;
+  text-align: center;
+  border: 1px solid white;
+}
+
+//********* Search Bar CSS *********
+::ng-deep .ion-searchbar-cust {
+  .searchbar-input-container {
+    input {
+      text-align: center !important;
+      font-style: italic !important;
+      line-height: 24px !important;
+    }
+    .searchbar-search-icon {
+      display: none !important;
+    }
+  }
+}
+
+.search-submit {
+  height: 36px;
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+//######################## Cards CSS ########################
+
+// Collapsible CSS
+::ng-deep .home-screen {
+  .mat-expansion-panel-body {
+    padding: 16px 16px !important;
+  }
+  .open-on-click {
+    .mat-expansion-panel-content {
+      background: #fff !important;
+    }
+  }
+
+  .open-default {
+    .mat-expansion-panel-content {
+      height: auto !important;
+      background: #fff !important;
+      visibility: visible !important;
+    }
+  }
+}
+
+.box-size {
+  // padding: 14px !important;
+  ion-grid{
+    padding: 0;
+  }
+  .card-value-align {
+    // top: 3vh;
+    padding-left: 2vh !important;
+  }
+  
+}
+
+.list-size {
+  // padding: 8px !important;
+  ion-grid{
+    padding: 0;
+  }
+  .card-value-align {
+    // top: 2vh;
+    // padding-left: 2vh !important;
+  }
+  
+}
+
+mat-expansion-panel {
+  box-shadow: none !important;
+}
+
+.mat-expansion-panel:not(.mat-expanded):not([aria-disabled="true"])
+  .mat-expansion-panel-header:hover {
+  background: none !important;
+}
+
+.box-size {
+  padding: 0 0px !important;
+  margin: 28px 8px !important;
+}
+.list-size {
+  padding: 0 0px !important;
+  margin: 10px 8px !important;
+}
+
+.list-size-value{
+  font-size: 21px !important;
+  // float: right !important;
+  text-align: right !important;
+}
+
+.card-1 {
+  background: #03a9f4 !important;
+  .card-heading-color {
+    color: #fff !important;
+  }
+}
+
+.card-2 {
+  background: #407bff !important;
+  .card-heading-color {
+    color: #fff !important;
+  }
+}
+
+.card-3 {
+  background: #6002ee !important;
+  .card-heading-color {
+    color: #fff !important;
+  }
+}
+
+.card-4 {
+  background: #03a9f4 !important;
+  .card-heading-color {
+    color: #fff !important;
+  }
+}
+
+.card-5 {
+  background: #93009e !important;
+  .card-heading-color {
+    color: #fff !important;
+  }
+}
+
+.card-6 {
+  background: #6002ee !important;
+  .card-heading-color {
+    color: #fff !important;
+  }
+}
+
+.card-7 {
+  background: #2962ff !important;
+  .card-heading-color {
+    color: #fff !important;
+  }
+}
+
+.card-8 {
+  background: #c2185b !important;
+  .card-heading-color {
+    color: #fff !important;
+  }
+}
+
+.card-9 {
+
+  background: #7b1fa2 !important;
+  .card-heading-color {
+    color: #fff !important;
+  }
+}
+
+.card-10 {
+  background: #2D4A9A !important;
+  .card-heading-color {
+    color: #fff !important;
+  }
+}
+
+.card-11 {
+  background: #3e2723 !important;
+  .card-heading-color {
+    color: #fff !important;
+  }
+}
+
+.card-12 {
+  background: #fff !important;
+  .card-heading-color {
+    color: black !important;
+  }
+}
+
+.card-heading {
+  font-family: Montserrat-Regular, Montserrat !important;
+  font-size: 14px !important;
+}
+
+.card-sub-heading {
+  font-size: 21px !important;
+  font-family: Montserrat-Medium, Montserrat !important;
+  font-weight: 500 !important;
+  text-align: center !important;
+}
+
+
+
+
+
+
+
+
+
+::ng-deep .mat-expansion-indicator::after{
+  padding: 5px !important;
+  color: white !important;
+  border-width: 0 4px 4px 0 !important;
+  margin-left: 1vh !important;
+  margin-right: 1vh !important;
+}
+
+.card-logo {
+    width: 6vh; 
+    height: 6vh;
+}
+
+.list-card-header-cust{
+  top: 1vh;
+}
+
+.list-card-value-cust{
+  top: 1vh;
+  padding-left: 2vh;
+}
